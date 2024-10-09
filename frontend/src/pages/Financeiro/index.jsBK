@@ -212,9 +212,14 @@ const Invoices = () => {
                   <TableCell style={{ fontWeight: 'bold' }} align="center">{rowStatus(invoices)}</TableCell>
                   <TableCell align="center">
                     {rowStatus(invoices) !== "Pago" ?
-                        <TableCell align="center">
-                        CHAVE PIX EMAIL: contato@hostei.com.br, após efetuar o PIX enviar comprovante para Whatsapp (64) 99236-7973
-                      </TableCell> :
+                      <Button
+                        size="small"
+                        variant="outlined"
+                        color="secondary"
+                        onClick={() => handleOpenContactModal(invoices)}
+                      >
+                        PAGAR
+                      </Button> :
                       <Button
                         size="small"
                         variant="outlined" 
